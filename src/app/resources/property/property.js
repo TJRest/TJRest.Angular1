@@ -3,9 +3,9 @@
 
   angular
     .module('angular')
-    .controller('projectController', projectController);
+    .controller('property', property);
 
   /** @ngInject */
-  function projectController(){
+  function property($mdSidenav) {
   }
 })();

@@ -32,12 +32,44 @@
         controllerAs: 'project',
         parent: 'master'
       })
+      .state('node', {
+        url: '/project/:projectId/:nodeId',
+        templateProvider: template,
+        controllerProvider: controller,
+        'resolve': {
+          'projectNode': projectNode
+        },
+        controllerAs: 'node',
+        parent: 'master'
+      })
       .state('authorize', {
         url: '/authorize?code',
         controller: 'authorizeController',
         controllerAs: 'authorize'
       });
     $urlRouterProvider.otherwise('/');
+  }
+
+  function template(projectNode, $http){
+    return $http({method: 'GET', url: '/app/resources/' + projectNode.type + '/' + projectNode.type + '.html'})
+     .then (function (result) {
+        return '<side-menu></side-menu>' + result.data;
+    }, function(){
+      console.error('error');
+    });
+  }
+
+  function controller(projectNode){
+    return projectNode.type;
+  }
+
+  function projectNode($http) {
+    return $http({method: 'GET', url: '/data/propertySchema.json'})
+     .then (function (result) {
+        return result.data;
+    }, function(){
+      console.error('error');
+    });
   }
 
 })();
