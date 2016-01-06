@@ -1,0 +1,14 @@
+<section class="jumbotron">
+  <h2>Projetos</h2>
+</section>
+<div class="techs" layout-align="center" style="width: 100%;">
+  <md-card ng-repeat="project in main.projects">
+    <md-card-content>
+      <h3 class="md-title">{{ project.title }}</h3>
+      <p>{{ project.author }}</p>
+      <md-button ng-href="{{ project.url }}" class="md-raised">
+        Acessar
+      </md-button>
+    </md-card-content>
+  </md-card>
+</div>
