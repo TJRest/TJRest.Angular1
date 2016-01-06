@@ -1,14 +1,17 @@
 <section class="jumbotron">
   <h2>Projetos</h2>
 </section>
-<div class="techs" layout-align="center" style="width: 100%;">
+
+<div layout="row" layout-sm="column" layout-align="center center" class="techs background-gray">
   <md-card ng-repeat="project in main.projects">
-    <md-card-content>
+    <md-card-content flex>
       <h3 class="md-title">{{ project.title }}</h3>
       <p>{{ project.author }}</p>
-      <md-button ng-href="{{ project.url }}" class="md-raised">
+    </md-card-content>
+    <div class="md-actions" layout="row" layout-align="end center">
+      <md-button ng-href="{{ project.url }}">
         Acessar
       </md-button>
-    </md-card-content>
+    </div>
   </md-card>
 </div>

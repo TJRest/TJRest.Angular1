@@ -11,7 +11,7 @@
 
     vm.projects = [
       {
-        'title': 'Project 1',
+        'title': 'Project 1 1231 23123 12 312 312',
         'author': 'John Doe',
         'url' : '/#/project/1'
       },
