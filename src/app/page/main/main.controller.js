@@ -16,7 +16,7 @@
         'url' : '/#/project/1'
       },
       {
-        'title': 'Project 2',
+        'title': 'Project 2232323',
         'author' : 'Joe Soap',
         'url' : '/#/project/2'
       },
@@ -26,7 +26,7 @@
         'url' : '/#/project/2'
       },
       {
-        'title': 'Project 2',
+        'title': 'Project 2123123123123',
         'author' : 'Joe Soap',
         'url' : '/#/project/2'
       },

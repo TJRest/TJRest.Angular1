@@ -3,13 +3,34 @@
 
   angular
     .module('angular')
-    .controller('balance', balance);
+    .directive('balance', balanceDirective)
+    .factory('balanceObj', balanceFact);
 
   /** @ngInject */
-  function balance($mdSidenav) {
+  function balanceDirective() {
+    var directive = {
+      restrict: 'E',
+      templateUrl: 'app/resources/balance/balance.html',
+      scope: {
+          ngRestId: '='
+      },
+      controller: balance,
+      controllerAs: 'bd',
+      bindToController: true
+    };
+
+    return directive;
+  }
+  
+  /** @ngInject */
+  function balance($scope, ngRest, balanceObj) {
     var vm = this;
-    vm.openMenu = function(){
-      $mdSidenav('left').toggle();
+    vm.balance = ngRest.instance(balanceObj, vm.ngRestId);
+  }
+
+  function balanceFact(){
+    return function(){
+      
     }
   }
 })();

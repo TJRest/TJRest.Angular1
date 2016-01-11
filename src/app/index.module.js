@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('angular', ['ui.router', 'ngMaterial', 'toastr']);
+    .module('angular', ['ui.router', 'ngMaterial', 'toastr', 'angular-rest']);
 
 })();

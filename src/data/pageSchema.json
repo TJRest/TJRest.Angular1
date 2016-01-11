@@ -1,0 +1,26 @@
+{
+    "id": "http://some.site.somewhere/entry-schema#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "schema for an fstab entry",
+    "type": "object",
+    "required": [ "storage" ],
+    "properties": [
+        {
+            "type": "balance",
+            "name" : "Test 1"
+        },
+        {
+            "type": "property",
+            "name" : "Test 2"
+        },
+        {
+            "type" : "side-menu"
+        }
+    ],
+    "definitions": {
+        "diskDevice": {},
+        "diskUUID": {},
+        "nfs": {},
+        "tmpfs": {}
+    }
+}

@@ -3,9 +3,26 @@
 
   angular
     .module('angular')
-    .controller('property', property);
+    .directive('property', propertyDirective);
 
   /** @ngInject */
-  function property($mdSidenav) {
+  function propertyDirective() {
+    var directive = {
+      restrict: 'E',
+      templateUrl: 'app/resources/property/property.html',
+      scope: {
+          creationDate: '='
+      },
+      controller: property,
+      controllerAs: 'bd',
+      bindToController: true
+    };
+
+    return directive;
+  }
+
+  /** @ngInject */
+  function property() {
+
   }
 })();
