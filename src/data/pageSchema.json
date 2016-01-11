@@ -4,19 +4,20 @@
     "description": "schema for an fstab entry",
     "type": "object",
     "required": [ "storage" ],
-    "properties": [
-        {
+    "properties": {
+        "teste" : {
             "type": "balance",
             "name" : "Test 1"
         },
-        {
+        "teste2" : {
             "type": "property",
-            "name" : "Test 2"
+            "name" : "Test 2",
+            "propertyOrder" : 1
         },
-        {
+        "teste3" : {
             "type" : "side-menu"
         }
-    ],
+    },
     "definitions": {
         "diskDevice": {},
         "diskUUID": {},
