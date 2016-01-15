@@ -16,21 +16,22 @@
       },
       controller: balance,
       controllerAs: 'bd',
-      bindToController: true
+      bindToController: true,
+      transclude: true
     };
 
     return directive;
   }
-  
+
   /** @ngInject */
-  function balance($scope, ngRest, balanceObj) {
+  function balance($scope, balanceObj, ngRest) {
     var vm = this;
     vm.balance = ngRest.instance(balanceObj, vm.ngRestId);
+    console.log(vm.balance);
   }
 
   function balanceFact(){
     return function(){
-      
     }
   }
 })();

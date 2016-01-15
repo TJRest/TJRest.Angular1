@@ -13,7 +13,7 @@
       scope: {
           creationDate: '='
       },
-      controller: property,
+      controller: ['Component', property],
       controllerAs: 'bd',
       bindToController: true
     };
@@ -22,7 +22,7 @@
   }
 
   /** @ngInject */
-  function property() {
-
+  function property(Component) {
+    Component.call(this);
   }
 })();
